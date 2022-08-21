@@ -35,12 +35,23 @@ void test01(){
     m.insert(map<int,int>::value_type(13,130));//第三种
     PrintMap(m2);
     //删除
-    m2.erase(12); //按照key删除，无法按照value删除
+    m2.erase(12); //按照key删除，但是无法按照value删除
     m2.erase(m.begin()++);
     PrintMap(m2);
+
+//查找
+    if (m2.end() !=  m2.find(11)) //返回的是迭代器
+        cout << "Find Success" <<endl;
+    else
+        cout << "Failed" << endl;
+    cout << "Count : "<<m2.count(10) << endl; //返回键的个数，对于map来说只有0和1
+
+//改变排序方式
+    
 
 }
 
 int main(){
     test01();
+    
 }
