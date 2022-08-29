@@ -41,7 +41,7 @@ public:
             return 0;
         else
             return result;
-
+    }
 };
 
 int main(){
